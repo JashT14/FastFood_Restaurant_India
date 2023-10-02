@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amar Juice Center</title>
+  <link rel="icon" type="image/x-icon" href="amar.jpg">
+<script>
+function validateform(){ 
+var name1=document.getElementById("t1").value; 
+if (name1=="")
+{ 
+alert("Please enter a Valid Name"); 
+} 
+else
+{
+alert("The Feedback has been recorded"); 
+}}
+</script>
+  <style>
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    body {
+  background-color: rgb(240, 240, 182); 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    #menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 33px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+  opacity: 0.9;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+  opacity: 1.0;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+.about_img {
+  flex: 1 1 400px;        
+}
+
+.about_img img {
+  width: 600px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+transition: width 3s, height 3s;
+}
+
+.about_img img:hover{
+width:800px;
+height:400px;
+}
+
+.about {
+  margin-top:45px;
+  margin-left:55px;
+  margin-right: 20px;
+}
+
+.about h3{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size:35px;
+  color: rgb(153, 6, 35);
+}
+
+.about p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 5px;
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+}
+
+.food-menu {
+  margin-top:45px;
+  margin-left:55px;
+  margin-right: 20px;
+}
+
+.food-menu-heading {
+  padding-left: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(153, 6, 35);
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+transition: width 3s, height 3s;
+}
+
+.food-menu-container img:hover{
+width:220px;
+height:220px;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.food-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.food-description .food-price {
+  font-weight: 700;
+}
+  
+.food__item{
+  display: inline-block;
+  padding: 10px;
+  border: 2px;
+  margin: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+.full_menu {
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.full_menu li {
+  padding: 5px;
+  text-decoration: none;
+}
+
+.reviews {
+  margin-top: 45px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.reviews h3{
+  margin-left: 55px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  color: rgb(153, 6, 35);
+}
+
+.reviews ul{
+  display: inline-block;
+  list-style-type: none;
+}
+
+.review__cont {
+  display: inline-block;
+}
+
+.flexcards {
+  margin-top: 45px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .card {
+    flex: 0 0 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.5);
+  } 
+  .card img {
+    width: 420px;
+  }
+  .card .text {
+    padding: 0 20px 20px;
+  }
+
+
+
+.locate {
+  margin-top: 45px;
+  margin-left: 55px;
+  margin-right: 20px;
+}
+
+.locate h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  color: rgb(153, 6, 35);
+}
+
+
+.contact__us {
+  margin-top: 45px;
+  margin-left: 55px;
+  margin-right: 20px;
+}
+
+.contact__us h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  color: rgb(153, 6, 35);
+}
+
+.feed_back {
+  text-align: center;
+}
+
+.header {
+  color: rgb(153, 6, 35);
+  text-align: center;
+  font-size: 18px;
+ 
+}
+
+.locate iframe {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+body {
+  background-color: rgb(240, 240, 182);
+}
+
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid rgb(153, 6, 35);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 100%;
+  background: rgb(153, 6, 35);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+  </style>
+</head>
+<body>
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="#about">About</a></li>
+			<li><a class="menu__item" href="#food-menu">Menu</a></li>
+			<li><a class="menu__item" href="#reviews">Reviews</a></li>
+			<li><a class="menu__item" href="#location">Locate Us</a></li>
+			<li><a class="menu__item" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="header">
+    <h1 style="text-align:center; margin-top:0px; padding:0px;">Amar Juice Center</h1>
+  </div>
+  <div class="about" id="about">
+    <h3>About</h3>
+    <p>Amar Juice center is well known for its Mumbai-based Street Food delicacies. It is located in Andheri West, Mumbai.
+      Our Menu includes a variety of fast food, meals, juices, milkshakes and much more. We have been proudly serving and 
+      promoting vegetarian cuisine since 1995!</p>
+  </div>
+  <div class="about_img">
+      <img src="amar_bg.jpg" style="border-radius:15px;">
+  </div>        
+  <section id="food-menu" id="menu">
+    <h2 class="food-menu-heading">Food Menu</h2>
+    <div class="food-menu-container container">
+      <div class="food-menu-item">
+        <div class="food-img">
+          <img src="pavbhaji.jpeg" alt="pavbhajimg" />
+        </div>
+        <div class="food-description">
+          <h2 class="food-titile">Pav Bhaji</h2>
+          <p class="food-price">Starts from &#8377; 105</p>
+        </div>
+      </div>
+
+      <div class="food-menu-item">
+        <div class="food-img">
+          <img
+            src="pulao.jpg"
+            alt="pulaoimg"
+          />
+        </div>
+        <div class="food-description">
+          <h2 class="food-title">Tawa Pulao</h2>
+          <p class="food-price">Price: &#8377; 130</p>
+        </div>
+      </div>
+      <div class="food-menu-item">
+        <div class="food-img">
+          <img src="bhel.jpg" alt="chaatimg" />
+        </div>
+        <div class="food-description">
+          <h2 class="food-title">Chaat</h3>
+          <p class="food-price">Starts from &#8377; 25</p>
+        </div>
+      </div>
+      <div class="food-menu-item">
+        <div class="food-img">
+          <img src="sandwich.jpeg" alt="sandwichimg" />
+        </div>
+        <div class="food-description">
+          <h2 class="food-title">Sandwich</h2>
+          </p>
+          <p class="food-price">Starts from &#8377; 45</p>
+        </div>
+      </div>
+      <div class="food-menu-item">
+        <div class="food-img">
+          <img src="juice.jpeg" alt="juiceimg" />
+        </div>
+        <div class="food-description">
+          <h2 class="food-title">Juices</h2>
+          <p class="food-price">Starts from &#8377; 45</p>
+        </div>
+      </div>
+      <div class="food-menu-item">
+        <div class="food-img">
+          <img src="milkshake.jpg" alt="shakeimg" />
+        </div>
+        <div class="food-description">
+          <h2 class="food-title">Milkshakes</h2>
+          <p class="food-price">Starts from &#8377; 75</p>
+        </div>
+      </div>
+    </div>
+    <ul class="full_menu"><li><h3><a href="menu.html" target="_blank">Explore our Full Menu here!</a></h3></li></ul>
+  </section>
+
+  <section class="flexcard">
+    <h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 35px; color: rgb(153, 6, 35); margin-top: 45px; margin-left: 40px; margin-right: 20px;">Customer Reviews</h3>
+    <main class="cards" id="reviews">
+      <article class="card">
+        <img src="pavbhajireview.jpg" alt="reviewimg">
+        <div class="text">
+          <h3>Arun:</h3>
+          <p>"This place is amazing! Their special pav bhaji is definitely worth it!"</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="masalapavreview.jpg" alt="reviewimg">
+        <div class="text">
+          <h3>Shruti:</h3>
+          <p>"Fantastic taste! The restaurant also maintains hygiene very well. would love to visit again!"</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="tawapulaoreview.jpg" alt="reviewimg">
+        <div class="text">
+          <h3>Swapnil:</h3>
+          <p>"I love this place so much I visit it every week for lunch on Fridays!"</p>
+        </div>
+      </article>
+    </main>
+  </section>
+
+  <section>
+    <div class="locate" id="location">
+      <h3>Locate Us</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4321.900068150723!2d72.83936274338568!3d19.11106013779481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c67d404f4d%3A0xc072c5be00a95928!2sAmar%20Juice%20Centre!5e0!3m2!1sen!2sin!4v1670868235956!5m2!1sen!2sin" width="750px" height="350px" style="border:red;border-radius: 15px;width: 600px;height: 350px;margin-left: 25em; margin-left: auto; margin-right: auto; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact__us" id="contact">
+      <h3>Contact Us</h3>
+    </div>
+    <form method="post">      
+      <input name="name" type="text" class="feedback-input" id="t1" placeholder="Name" />   
+      <input name="email" type="email" class="feedback-input" placeholder="Email" />
+      <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+      <input type="submit" onclick="validateform()" value="SUBMIT"/>
+    </form>
+
+</body>
+</html>

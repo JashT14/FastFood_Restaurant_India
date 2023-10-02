@@ -1,0 +1,232 @@
+:root {
+    --background: rgba(244, 250, 119, 0.85);
+  }
+  *{
+    margin:0px;
+    padding:0px;
+  }
+  body {
+background-color: rgb(240, 240, 182);
+}
+  #menu__toggle {
+opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+top: 0;
+transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+top: 0;
+transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+left: 0 !important;
+}
+.menu__btn {
+position: fixed;
+top: 33px;
+left: 20px;
+width: 26px;
+height: 26px;
+cursor: pointer;
+z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+display: block;
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: #616161;
+transition-duration: .25s;
+}
+.menu__btn > span::before {
+content: '';
+top: -8px;
+}
+.menu__btn > span::after {
+content: '';
+top: 8px;
+}
+.menu__box {
+display: block;
+position: fixed;
+top: 0;
+left: -100%;
+width: 300px;
+height: 100%;
+margin: 0;
+padding: 80px 0;
+list-style: none;
+background-color: #ECEFF1;
+box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+transition-duration: .25s;
+opacity: 0.9;
+}
+.menu__item {
+display: block;
+padding: 12px 24px;
+color: #333;
+font-family: 'Roboto', sans-serif;
+font-size: 20px;
+font-weight: 600;
+text-decoration: none;
+transition-duration: .25s;
+opacity: 1.0;
+}
+.menu__item:hover {
+background-color: #CFD8DC;
+}
+
+.about_img {
+flex: 1 1 400px;        
+}
+
+.about_img img {
+width: 500px;
+height: 250px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.about {
+margin-top:45px;
+margin-left:40px;
+margin-right: 20px;
+}
+
+.about h3{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size:35px;
+color: rgb(153, 6, 35);
+}
+
+.about p{
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+padding: 5px;
+flex: 1 1 400px;
+padding: 30px;
+margin: auto;
+}
+
+.food-menu {
+margin-top:45px;
+margin-left:40px;
+margin-right: 20px;
+}
+
+.food-menu-heading {
+padding-left: 40px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 35px;
+font-weight: bold;
+color: rgb(153, 6, 35);
+}
+
+.food-menu-container {
+display: flex;
+flex-wrap: wrap;
+padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img {
+display: block;
+width: 250px;
+height: 250px;
+border-radius: 50%;
+object-fit: cover;
+object-position: center;
+}
+
+.food-menu-item {
+display: flex;
+flex: 1 1 600px;
+justify-content: space-evenly;
+margin-bottom: 3rem;
+}
+
+.food-description {
+margin: auto 1.5rem;
+}
+
+.font-title {
+font-size: 1.8rem;
+font-weight: 400;
+color: #444;
+}
+
+.food-description p {
+font-size: 1.4rem;
+color: #555;
+font-weight: 500;
+}
+
+.food-description .food-price {
+font-weight: 700;
+}
+
+.food__item{
+display: inline-block;
+padding: 10px;
+border: 2px;
+margin: 20px;
+font-family: 'Times New Roman', Times, serif;
+font-size: 25px;
+}
+
+.reviews {
+margin-top: 45px;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+.reviews h3{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 35px;
+color: rgb(153, 6, 35);
+}
+
+.reviews ul{
+display: inline-block;
+list-style-type: none;
+}
+
+.review__cont {
+display: inline-block;
+}
+
+.locate {
+margin-top: 45px;
+margin-left: 40px;
+margin-right: 20px;
+}
+
+.locate h3 {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 35px;
+color: rgb(153, 6, 35);
+}
+
+
+
+.contact__us {
+margin-top: 45px;
+margin-left: 40px;
+margin-right: 20px;
+}
+
+.contact__us h3 {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 35px;
+color: rgb(153, 6, 35);
+}
+
+.contact__us ul {
+list-style-type: none;
+}
